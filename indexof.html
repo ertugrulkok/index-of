@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+    <script></script>
+</head>
+<body>
+
+    <h1>Arrays3</h1>
+
+  <script>
+        
+        const persons = [ 
+           
+            {name: "ahmet", age : 30, eyecolor: "blue"},
+            {name: "ali", age : 50, eyecolor: "green" },
+            {name: "hasan", age : 43 ,eyecolor: "black"}, 
+            {name: "merve", age : 25 , eyecolor: "black"},
+            {name: "adnan", age : 37, eyecolor: "brown"},
+            {name: "ayşe", age : 65, eyecolor: "brown"},
+            {name: "selma", age : 19, eyecolor: "hazel"}
+
+        ]
+
+              console.log(persons)
+
+      /* --------------------Filter------------------- */
+              
+        var filteredPersons = persons.filter((item) => {
+        return item.eyecolor == "brown"; }); 
+
+        console.log(filteredPersons); 
+
+        
+       /* ------------------Filter--------------------- */
+
+        var blueeyedPersons = persons.filter((item) => {
+        return item.eyecolor == "blue"; }); 
+
+        console.log(blueeyedPersons); 
+        
+        
+        /* -------------------Filter-------------------- */     
+
+        var middleagedPersons = persons.filter((item) => {
+        return item.age <= 40 ;}); 
+
+        console.log(middleagedPersons); 
+
+        /* -------------------Find-------------------- */ 
+
+        var aliPersons = persons.find((item) => {
+        return item.name === "Ali" ;}); 
+
+        console.log(aliPersons); 
+
+        /* -------------------Find-------------------- */
+        var teenPersons = persons.find((item) => {
+        return item.age == 19  ;}); 
+
+        console.log(teenPersons); 
+
+
+        var findPerson = persons.find((item) => {
+        return item.age == 25; }); 
+
+        console.log(findPerson); 
+
+        /* -------------------Find-------------------- */
+
+        var findPerson = persons.find((item) => {
+        return item.eyecolor === "black"; }); 
+
+        console.log(findPerson); 
+
+
+         /* -------------------İndex of-------------------- */
+
+        let indexPerson = persons.indexOf("selma"); 
+        
+        console.log(indexPerson); 
+
+
+
+         /* -------------------Reduce-------------------- */
+        var totalAge = persons.reduce((ageSpace , item) => {
+        return parseInt(item.age + ageSpace); }); 
+
+         console.log(totalAge); 
+
+       /* -------------------Map-------------------- */
+         var personNames = persons.map((item) => {
+         return item.name; }).indexOf("ahmet");
+
+        console.log(personNames); 
+
+
+        var personNames = persons.map((item) => {
+         return item.name; }).indexOf("ayşe");
+
+        console.log(personNames); 
+
+
+        /* -------------------every-------------------- */
+
+        var everyBody = persons.every((item) => {
+        return item.age <= 100;}); 
+
+         console.log(everyBody);
+
+
+         var everyBody = persons.every((item) => {
+        return item.age >= 18 ;}); 
+
+         console.log(everyBody);
+
+        /* -------------------every-------------------- */
+
+         var erasetheOne = persons.pop();
+         console.log(erasetheOne); 
+
+         console.log(persons)
+
+
+
+
+
+        
+
+
+
+
+            
+
+
+        
+
+        
+
+        
+         
+
+
+
+
+    </script>
+</body>
+</html>
+     
